@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparando preços</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="borda">
+            <header>
+                <img src="./img/img_inicial" alt="">
+                <h1>Compare os preços!</h1>
+            </header>
+            <form>
+                <input id="precoA" type="number" required placeholder="Preço A">
+                <input id="precoB" type="number" required placeholder="Preço B">
+                <button type="button" onclick="adicionar()">Adicionar</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="text"><span id="res-color">Esperando..</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
+
+<!-- 
+    1. Esqueci de criar o script no HTML, e nada funcionou, claro.
+
+    2. O button está dentro de formulário, se não especi-
+    ficar de maneira redundante "type=button", nessa si-
+    tuação, sempre que apertado ele "envia" o formulário
+    por isso recarregava a pagina logo que eu apertava e
+    não dava pra ver as mudanças que fiz kkkk
+
+    3. no JS eu esqueci de colocar .value, para 
+    transformar para numero na expressão:
+    Number(variavel.value)
+    E aí não funcionou
+
+    4. Na hora de usar o inner HTML, eu coloquei () parênteses
+    e não funcionou, pois ele não usa parênteses. 
+-->
